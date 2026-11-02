@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscador de documentos</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Buscador de documentos</h1>
+
+    <form action="/" method="get">
+        <label for="query">Consulta:</label>
+        <input
+            type="text"
+            id="query"
+            name="q"
+            value="$consulta"
+            placeholder="Escribe tu búsqueda"
+            maxlength="1000"
+            required
+        >
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h2>Resultado de la consulta</h2>
+    $resultados
+
+    <h2>Documentos</h2>
+    $documentos
+
+    <h2>Matriz de similitud</h2>
+    <div class="table-scroll">
+        $matriz
+    </div>
+    $aviso
+
+    <h2>TF, DF y pesos</h2>
+    <div class="table-scroll">
+        $tabla_pesos
+    </div>
+</body>
+</html>
